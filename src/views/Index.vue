@@ -1,17 +1,24 @@
 <template>
   <div class="index">
-    <InputText/>
+    <InputText v-model="InputText"/>
+    <Preview :text="InputText"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import InputText from '@/components/InputText.vue'
+import Preview from '@/components/Preview.vue'
 
 export default {
   name: 'Index',
   components: {
-    InputText
+    InputText,
+    Preview
+  },
+  data () {
+    return {
+      InputText: ''
+    }
   }
 }
 </script>

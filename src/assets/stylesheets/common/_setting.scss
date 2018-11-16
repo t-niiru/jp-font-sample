@@ -1,0 +1,86 @@
+$use_html5: true;
+
+$fontSize: 1rem;
+$fontColor: #313131;
+$baseLineHeight: 1.7;
+$subBaseLineHeight: 2;
+
+$gothic: "Roboto", "Noto Sans", Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$serif: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$DINPro-bold: DINPro-Bold,Arial,‘Lucida Grande’,‘Hiragino Kaku Gothic ProN’,‘ヒラギノ角ゴ ProN W6’,Meiryo,‘メイリオ’,sans-serif;
+
+//base-color
+$main: #000;
+$base-gray: #313131;
+$black: #000;
+$white: #fff;
+$light-white: #f0f0f0;
+$gray: #222;
+$gray2: #333;
+$gray3: #2a2a2a;
+$light-gray: #4d4d4d;
+$light-gray2: #6a6a6a;
+$light-gray3: #999;
+
+//background
+$opacity_back04: rgba(0,0,0,0.4);
+$opacity_back05: rgba(0,0,0,0.5);
+$opacity_back06: rgba(0,0,0,0.6);
+
+// width, height
+$width_main: 920px;
+$width_slider: 1900px;
+$height_slider: 620px;
+$width_sidenavi: 200px;
+$width_side: 5%;
+$mb_contents: 100px;
+
+// $flexslider_width: $width_main
+$flexslider_width_gallery: 680px;
+$flexslider_height: 230px;
+$flexslider_width_li: 172px;
+$flexslider_width_pdL: 15px;
+
+// transition
+$transition_edit: .2s;
+
+//border-radius
+$radius_default: 4px;
+$radius_middle: 10px;
+$radiun_max: 20px;
+
+// breakpoint
+// @media #{$bp_min-bp1}のインデントの中にスタイルを記述
+$phone: 600px;
+$tablet: 900px;
+$pc : 1200px;
+
+// デバイスの向き
+// 横向き
+$landscape_style: "screen and (orientation:landscape)";
+
+//スマホ用
+//600px以下
+$phone_style_max: "screen and (max-width:" + $phone + ")";
+//601px以上
+$phone_style_min: "screen and (min-width:" + ($phone + 1px) + ")";
+
+//タブレット用
+//992px以下
+$tablet_style_max: "screen and (max-width:" + $tablet + ")";
+//993px以上
+$tablet_style_min: "screen and (min-width:" + ($tablet + 1px) + ")";
+
+//タブレット用（横）
+//993px以上1200px以下
+$tablet_width_style: "screen and (min-width:" + ($tablet + 1px) + ") and (max-width:" + $pc + ")";
+
+//PC用
+//1200px以下
+$pc_style_max: "screen and (max-width:" + $pc + ")";
+//1201px以上
+$pc_style_min: "screen and (min-width:" + ($pc + 1px) + ")";
+
+// z-index(右側が上層)
+// z-index: index($z, linkbox) で呼び出し
+$z : linkbox;

@@ -1,4 +1,7 @@
-# vue-font-test
+# jp-font-sample
+
+## demo
+See [netlify.com](https://jp-font-sample.netlify.com)
 
 ## Project setup
 ```

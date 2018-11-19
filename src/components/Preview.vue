@@ -1,57 +1,57 @@
 <template>
   <div class="preview-area">
-    <ul class="preview-list">
+    <ul class="preview-list" :style="{ fontSize: FontSetting.FontSize + 'px', fontStyle: FontSetting.FontStyle, fontWeight: FontSetting.FontWeight }">
       <li class="preview-list-item">
         M PLUS 1p:<br>
-        【<span class="m-plus-1p">{{ text }}</span>】
+        【<span class="m-plus-1p">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         さわらび明朝:<br>
-        【<span class="sawarabi-mincho">{{ text }}</span>】
+        【<span class="sawarabi-mincho">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         M PLUS Rounded 1c:<br>
-        【<span class="m-plus-rounded-1c">{{ text }}</span>】
+        【<span class="m-plus-rounded-1c">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         Kosugi Maru:<br>
-        【<span class="kosugi-maru">{{ text }}</span>】
+        【<span class="kosugi-maru">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         Noto Serif JP:<br>
-        【<span class="noto-serif-jp">{{ text }}</span>】
+        【<span class="noto-serif-jp">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         さわらびゴシック:<br>
-        【<span class="sawarabi-gothic">{{ text }}</span>】
+        【<span class="sawarabi-gothic">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         Kosugi:<br>
-        【<span class="wf-Kosugi">{{ text }}</span>】
+        【<span class="wf-Kosugi">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         はんなり明朝:<br>
-        【<span class="wf-hannari">{{ text }}</span>】
+        【<span class="wf-hannari">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         Noto Sans JP:<br>
-        【<span class="wf-notosansjapanese">{{ text }}</span>】
+        【<span class="wf-notosansjapanese">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         こころ明朝:<br>
-        【<span class="wf-kokoro">{{ text }}</span>】
+        【<span class="wf-kokoro">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         ニコモジ:<br>
-        【<span class="wf-nicomoji">{{ text }}</span>】
+        【<span class="wf-nicomoji">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         ニクキュウ:<br>
-        【<span class="wf-nikukyu">{{ text }}</span>】
+        【<span class="wf-nikukyu">{{ InputText }}</span>】
       </li>
       <li class="preview-list-item">
         Default:<br>
-        【<span class="default">{{ text }}</span>】
+        【<span class="default">{{ InputText }}</span>】
       </li>
     </ul>
   </div>
@@ -61,11 +61,13 @@
 export default {
   name: 'Preview',
   data () {
-    return {
-    }
+    return {}
   },
   props: {
-    text: String
+    InputText: String,
+    FontSetting: {
+      type: Object
+    }
   }
 }
 </script>

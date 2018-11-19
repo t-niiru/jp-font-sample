@@ -1,6 +1,6 @@
 <template>
   <div class="input-area">
-    <b-field label="font" :addons=false>
+    <b-field label="テキスト" :addons=false>
       <b-input @input="submit" v-model="InputText" placeholder="type text"></b-input>
     </b-field>
   </div>
@@ -11,11 +11,7 @@ export default {
   name: 'InputText',
   data () {
     return {
-      InputText: '',
-      font: {
-        size: 2,
-        weight: 'normal'
-      }
+      InputText: ''
     }
   },
   methods: {

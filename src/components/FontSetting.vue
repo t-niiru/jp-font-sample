@@ -1,5 +1,5 @@
 <template>
-  <div class="setting-contents">
+  <div class="setting-contents box">
     <div>
       <b-field label="font-style">
         <b-select @input="submit" v-model="FontSetting.FontStyle">
@@ -18,7 +18,13 @@
         </b-select>
       </b-field>
       <b-field label="font-size" :addons=false>
-        <b-input @input="submit" v-model="FontSetting.FontSize" placeholder="type num"></b-input>
+        <b-input
+          type="number"
+          min="10"
+          max="100"
+          @input="submit"
+          v-model="FontSetting.FontSize"
+          placeholder="type num"></b-input>
       </b-field>
     </div>
   </div>
@@ -38,7 +44,6 @@ export default {
   },
   methods: {
     submit () {
-      console.log('sumit!!')
       this.$emit('input',
         this.FontSetting
       )

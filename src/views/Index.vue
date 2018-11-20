@@ -30,3 +30,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.index{
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+</style>

@@ -1,57 +1,21 @@
 <template>
   <div class="preview-area">
-    <ul class="preview-list" :style="{ fontSize: FontSetting.FontSize + 'px', fontStyle: FontSetting.FontStyle, fontWeight: FontSetting.FontWeight }">
-      <li class="preview-list-item">
-        M PLUS 1p:<br>
-        【<span class="m-plus-1p">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        さわらび明朝:<br>
-        【<span class="sawarabi-mincho">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        M PLUS Rounded 1c:<br>
-        【<span class="m-plus-rounded-1c">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        Kosugi Maru:<br>
-        【<span class="kosugi-maru">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        Noto Serif JP:<br>
-        【<span class="noto-serif-jp">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        さわらびゴシック:<br>
-        【<span class="sawarabi-gothic">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        Kosugi:<br>
-        【<span class="wf-Kosugi">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        はんなり明朝:<br>
-        【<span class="wf-hannari">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        Noto Sans JP:<br>
-        【<span class="wf-notosansjapanese">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        こころ明朝:<br>
-        【<span class="wf-kokoro">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        ニコモジ:<br>
-        【<span class="wf-nicomoji">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        ニクキュウ:<br>
-        【<span class="wf-nikukyu">{{ InputText }}</span>】
-      </li>
-      <li class="preview-list-item">
-        Default:<br>
-        【<span class="default">{{ InputText }}</span>】
+    <ul class="preview-list">
+      <li class="preview-list-item" v-for="FontFormat in FontFormats" :key="FontFormat.id">
+        <div class="font-title">
+          <a :href="FontFormat.url" target="_blank" rel="noopener">
+            <b-icon icon="open-in-new"></b-icon>
+          </a>
+          {{ FontFormat.name }}
+        </div>
+        <div class="font-text" :class="FontFormat.class"
+          :style="{
+            fontSize: FontSetting.FontSize + 'px',
+            fontStyle: FontSetting.FontStyle,
+            fontWeight: FontSetting.FontWeight,
+            fontFamily: FontFormat.family }">
+              {{ InputText }}
+        </div>
       </li>
     </ul>
   </div>
@@ -61,7 +25,100 @@
 export default {
   name: 'Preview',
   data () {
-    return {}
+    return {
+      FontFormats: [
+        {
+          name: 'bwserデフォルト',
+          class: 'default',
+          url: 'http://rinrin.saiin.net/~aor/fonts/defaultfonts',
+          family: 'none'
+        },
+        {
+          name: 'Noto Serif JP',
+          class: 'wf-noto-serif-jp',
+          url: 'https://fonts.google.com/specimen/Noto+Serif+JP',
+          family: 'Noto Serif JP'
+        },
+        {
+          name: 'Noto Sans JP',
+          class: 'wf-noto-sans-jp',
+          url: 'https://fonts.google.com/specimen/Noto+Sans+JP',
+          family: 'Noto Sans JP'
+        },
+        {
+          name: 'Noto Sans SC',
+          class: 'wf-noto-sans-sc',
+          url: 'https://fonts.google.com/specimen/Noto+Sans+SC',
+          family: 'Noto Sans SC'
+        },
+        {
+          name: 'Noto Sans TC',
+          class: 'wf-noto-sans-tc',
+          url: 'https://fonts.google.com/specimen/Noto+Sans+TC',
+          family: 'Noto Sans SC'
+        },
+        {
+          name: 'M PLUS 1p',
+          class: 'm-plus-1p',
+          url: 'https://fonts.google.com/specimen/M+PLUS+1p',
+          family: 'M PLUS 1p'
+        },
+        {
+          name: 'M PLUS Rounded 1c',
+          class: 'm-plus-rounded-1c',
+          url: 'https://fonts.google.com/specimen/M+PLUS+Rounded+1c',
+          family: 'M PLUS Rounded 1c'
+        },
+        {
+          name: 'さわらび明朝',
+          class: 'awarabi-mincho',
+          url: 'https://fonts.google.com/specimen/Sawarabi+Mincho',
+          family: 'Sawarabi Mincho'
+        },
+        {
+          name: 'さわらびゴシック',
+          class: 'sawarabi-gothic',
+          url: 'https://fonts.google.com/specimen/Sawarabi+Gothic',
+          family: 'Sawarabi Gothic'
+        },
+        {
+          name: 'Kosugi',
+          class: 'wf-Kosugi',
+          url: 'https://fonts.google.com/specimen/Kosugi',
+          family: 'Kosugi'
+        },
+        {
+          name: 'Kosugi Maru',
+          class: 'kosugi-maru',
+          url: 'https://fonts.google.com/specimen/Kosugi+Maru',
+          family: 'Kosugi Maru'
+        },
+        {
+          name: 'はんなり明朝',
+          class: 'wf-hannari',
+          url: 'https://googlefonts.github.io/japanese/#hannari',
+          family: 'Hannari'
+        },
+        {
+          name: 'こころ明朝',
+          class: 'wf-kokoro',
+          url: 'https://googlefonts.github.io/japanese/#kokoro',
+          family: 'Kokoro'
+        },
+        {
+          name: 'ニコモジ',
+          class: 'wf-nicomoji',
+          url: 'https://googlefonts.github.io/japanese/#nicomoji',
+          family: 'Nico Moji'
+        },
+        {
+          name: 'ニクキュウ',
+          class: 'wf-nikukyu',
+          url: 'https://googlefonts.github.io/japanese/#nikukyu',
+          family: 'Nikukyu'
+        }
+      ]
+    }
   },
   props: {
     InputText: String,
@@ -73,51 +130,72 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.preview-area{
-  max-width: 1000px;
-  width: 100%;
-  margin: auto;
-}
 .preview-list-item{
   margin: 0 0 1.5rem;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid #313131;
 }
-.m-plus-1p{
-  font-family: 'M PLUS 1p', sans-serif;
+.font-title{
+  margin: 0 0 1rem;
 }
-.sawarabi-mincho{
-  font-family: 'Sawarabi Mincho', sans-serif;
+.font-text{
+  margin: 0 1rem;
 }
-.sawarabi-gothic{
-  font-family: 'Sawarabi Gothic', sans-serif;
+.icon{
+  background-color: #313131;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  letter-spacing: 0;
 }
-.m-plus-rounded-1c{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.kosugi-maru{
-  font-family: 'Kosugi Maru', sans-serif;
-}
-.noto-serif-jp{
-  font-family: 'Noto Serif JP', sans-serif;
-}
-.wf-Kosugi{
-  font-family: 'Kosugi', sans-serif;
-}
-.wf-hannari {
-  font-family: "Hannari", sans-serif;
-}
-.wf-kokoro {
-  font-family: "Kokoro", sans-serif;
-}
-.wf-nicomoji {
-  font-family: "Nico Moji", sans-serif;
-}
-.wf-nikukyu {
-  font-family: "Nikukyu", sans-serif;
-}
-.wf-notosansjapanese {
-  font-family: "Noto Sans JP", sans-serif;
-}
-.default{
-  font-family: none;
-}
+// .m-plus-1p{
+//   font-family: 'M PLUS 1p';
+// }
+// .sawarabi-mincho{
+//   font-family: 'Sawarabi Mincho';
+// }
+// .sawarabi-gothic{
+//   font-family: 'Sawarabi Gothic';
+// }
+// .m-plus-rounded-1c{
+//   font-family: 'M PLUS Rounded 1c';
+// }
+// .kosugi-maru{
+//   font-family: 'Kosugi Maru';
+// }
+// .wf-noto-serif-jp{
+//   font-family: "Noto Serif JP";
+// }
+// .wf-Kosugi{
+//   font-family: 'Kosugi';
+// }
+// .wf-hannari {
+//   font-family: "Hannari";
+// }
+// .wf-kokoro {
+//   font-family: "Kokoro";
+// }
+// .wf-nicomoji {
+//   font-family: "Nico Moji";
+// }
+// .wf-nikukyu {
+//   font-family: "Nikukyu";
+// }
+// .wf-noto-sans-jp {
+//   font-family: "Noto Sans JP";
+// }
+// .wf-noto-sans-sc {
+//   font-family: "Noto Sans SC";
+// }
+// .wf-noto-sans-tc {
+//   font-family: "Noto Sans TC";
+// }
+// .default{
+//   font-family: none;
+// }
 </style>

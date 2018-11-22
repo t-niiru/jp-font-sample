@@ -1,8 +1,14 @@
 <template>
   <div class="index">
     <InputText v-model="InputText"/>
-    <FontSetting v-model="FontSetting"/>
-    <Preview :input-text="InputText" :font-setting="FontSetting"/>
+    <div class="columns">
+      <div class="column is-narrow">
+        <FontSetting v-model="FontSetting"/>
+      </div>
+      <div class="column">
+        <Preview :input-text="InputText" :font-setting="FontSetting"/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -20,7 +26,7 @@ export default {
   },
   data () {
     return {
-      InputText: '',
+      InputText: 'これは今ようやくこの破壊界というのの中に渡っらしいない。ようやく事実が意味らはとやかくその攻撃でますばかりにしから来ないがは注文なれたらなて、そうにはするないだでた。',
       FontSetting: {
         FontSize: 16,
         FontStyle: 'normal',
@@ -33,8 +39,11 @@ export default {
 
 <style lang="scss" scoped>
 .index{
-  max-width: 1000px;
   width: 100%;
+  max-width: 1000px;
   margin: auto;
+}
+.columns{
+  margin: 0;
 }
 </style>

@@ -130,6 +130,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.preview-area{
+  padding: 1rem;
+}
 .preview-list-item{
   margin: 0 0 1.5rem;
   padding: 0 0 1.5rem;
@@ -153,49 +156,4 @@ export default {
   display: inline-block;
   letter-spacing: 0;
 }
-// .m-plus-1p{
-//   font-family: 'M PLUS 1p';
-// }
-// .sawarabi-mincho{
-//   font-family: 'Sawarabi Mincho';
-// }
-// .sawarabi-gothic{
-//   font-family: 'Sawarabi Gothic';
-// }
-// .m-plus-rounded-1c{
-//   font-family: 'M PLUS Rounded 1c';
-// }
-// .kosugi-maru{
-//   font-family: 'Kosugi Maru';
-// }
-// .wf-noto-serif-jp{
-//   font-family: "Noto Serif JP";
-// }
-// .wf-Kosugi{
-//   font-family: 'Kosugi';
-// }
-// .wf-hannari {
-//   font-family: "Hannari";
-// }
-// .wf-kokoro {
-//   font-family: "Kokoro";
-// }
-// .wf-nicomoji {
-//   font-family: "Nico Moji";
-// }
-// .wf-nikukyu {
-//   font-family: "Nikukyu";
-// }
-// .wf-noto-sans-jp {
-//   font-family: "Noto Sans JP";
-// }
-// .wf-noto-sans-sc {
-//   font-family: "Noto Sans SC";
-// }
-// .wf-noto-sans-tc {
-//   font-family: "Noto Sans TC";
-// }
-// .default{
-//   font-family: none;
-// }
 </style>

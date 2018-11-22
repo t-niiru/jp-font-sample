@@ -15,8 +15,8 @@ export default {
     }
   },
   methods: {
-    submit (e) {
-      this.$emit('input', this.InputText)
+    submit () {
+      this.$store.commit('setInputText', this.InputText)
     }
   }
 }

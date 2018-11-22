@@ -32,19 +32,16 @@
 export default {
   name: 'Setting',
   data () {
-    return {
-      FontSetting: {
-        FontSize: 16,
-        FontStyle: 'normal',
-        FontWeight: 400
-      }
+    return {}
+  },
+  computed: {
+    FontSetting () {
+      return this.$store.state.FontSetting
     }
   },
   methods: {
     submit () {
-      this.$emit('input',
-        this.FontSetting
-      )
+      this.$store.commit('setFontSetting', this.FontSetting)
     }
   }
 }
@@ -52,6 +49,7 @@ export default {
 
 <style scoped lang="scss">
 .setting-area{
+  width: 125px;
   position: sticky;
   top: 11rem;
   background-color: #fff;

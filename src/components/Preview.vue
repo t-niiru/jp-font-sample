@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Preview',
   data () {
@@ -120,11 +122,8 @@ export default {
       ]
     }
   },
-  props: {
-    InputText: String,
-    FontSetting: {
-      type: Object
-    }
+  computed: {
+    ...mapState(['InputText', 'FontSetting'])
   }
 }
 </script>

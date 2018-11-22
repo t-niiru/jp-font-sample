@@ -5,6 +5,7 @@ import 'buefy/dist/buefy.css'
 import '@/assets/stylesheets/style.scss'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 Vue.use(ress)
 Vue.use(Buefy)
@@ -13,5 +14,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

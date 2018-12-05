@@ -20,7 +20,7 @@
       <b-input
         type="number"
         min="10"
-        max="100"
+        max="50"
         @input="submit"
         v-model="FontSetting.FontSize"
         placeholder="type num"></b-input>

@@ -25,15 +25,22 @@ export default {
 <style scoped lang="scss">
 .input-area{
   position: sticky;
-  top: 3rem;
+  top: 2rem;
+  margin: 0 0 02rem;
   background-color: #fff;
-  margin: 3rem 0;
+  z-index: 1;
 }
 .text-input /deep/{
   height: 4rem;
   input{
     height: 100%;
     padding: 10px;
+  }
+}
+@media only screen and (min-width: 601px){
+  .input-area{
+    top: 3rem;
+    margin: 2rem 0;
   }
 }
 </style>

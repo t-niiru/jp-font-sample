@@ -6,6 +6,6 @@
 
 <style lang="scss">
 #app {
-
+  padding: 1rem;
 }
 </style>

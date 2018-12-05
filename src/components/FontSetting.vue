@@ -54,6 +54,9 @@ export default {
   top: 11rem;
   background-color: #fff;
   .field{
+    .label{
+      font-size: 1.6rem;
+    }
     .control{
       margin: 0 0 0 10px;
     }

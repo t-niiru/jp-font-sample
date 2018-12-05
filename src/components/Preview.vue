@@ -3,7 +3,7 @@
     <ul class="preview-list">
       <li class="preview-list-item" v-for="FontFormat in FontFormats" :key="FontFormat.id">
         <div class="font-title">
-          <a :href="FontFormat.url" target="_blank" rel="noopener">
+          <a :href="FontFormat.url" title="FontFormat.name" target="_blank" rel="noopener">
             <b-icon icon="open-in-new"></b-icon>
           </a>
           {{ FontFormat.name }}

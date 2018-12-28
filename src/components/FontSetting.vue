@@ -1,13 +1,17 @@
 <template>
   <div class="setting-area">
     <b-field label="font-style">
-      <b-select @input="submit" v-model="FontSetting.FontStyle">
+      <b-select name="font-style"
+        @input="submit"
+        v-model="FontSetting.FontStyle">
         <option value="normal" selected>normal</option>
         <option value="italic">italic</option>
       </b-select>
     </b-field>
     <b-field label="font-weight">
-      <b-select @input="submit" v-model="FontSetting.FontWeight">
+      <b-select name="font-weight"
+        @input="submit"
+        v-model="FontSetting.FontWeight">
         <option value="100">100</option>
         <option value="300">300</option>
         <option value="400" selected>400</option>
